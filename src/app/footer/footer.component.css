@@ -1,0 +1,19 @@
+
+.page-footer{
+    background-color: #202020;
+    color: #fff;
+}
+
+.footer-copyright{
+    background-color: rgba(0,0,0,0.2);
+}
+
+.nav-link-a{
+    color: #fff;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.container-fluid{
+    min-height: 150px;
+}

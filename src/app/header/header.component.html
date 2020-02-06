@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    
+    <a class="navbar-brand" href="#">
+        <img src="../../assets/teste-ass.gif" style="width: 133.16px;">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link-a" href="#">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-a" href="#">Shopping</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-a" href="#">Gubee</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-a disabled" href="#">Mais</a>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <button (click)="open(contentMercado)" class="btn btn-primary" style="margin-right: 10px;">
+                Filtrar Mercado
+            </button>
+            <button (click)="open(contentTecnologia)" class="btn btn-primary" style="margin-right: 10px;">
+                Filtrar Tecnologia
+            </button>
+            <input 
+                [(ngModel)]="filtroComics"
+                (ngModelChange)="updateFiltro()"
+                class="form-control mr-sm-2" 
+                type="search" 
+                placeholder="Pesquisar">
+        </div>
+    </div>
+</nav>
+
+<ng-template #contentMercado let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Filtrar tecnologias e mercado alvo</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+            <strong style="display: block;">Mercado Alvo:</strong>
+            <div class="div-one" >
+                <div *ngFor="let mercado of mercadoAlvo" class="div-one-item" (click)="addOneItemMercadoAlvo(mercado)">{{mercado}}</div>
+            </div>
+            <!--div>
+                <button type="button" (click)="modal.close('')" class="btn btn-outline-dark div-btn" > > </button>
+                <button type="button" (click)="modal.close('')" class="btn btn-outline-dark" > < </button>
+            </div-->
+            <div class="div-two">
+                <div *ngFor="let mercadoFiltro of mercadoAlvoFiltro" class="div-one-item" (click)="removeOneItemMercadoAlvo(mercadoFiltro)">{{mercadoFiltro}}</div>
+            </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('');">Filtrar</button>
+    </div>
+</ng-template>
+
+<ng-template #contentTecnologia let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Filtrar tecnologias e mercado alvo</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <form>
+
+        <div class="form-group">
+            <strong style="display: block;">Tecnologias Utilizadas:</strong>
+            <div class="div-one">
+                <div *ngFor="let tecnologia of tecnologias" class="div-one-item" (click)="addOneItemTecnologias(tecnologia)">{{tecnologia}}</div>
+            </div>
+            <!--div>
+                <button type="button" (click)="modal.close('')" class="btn btn-outline-dark div-btn" > > </button>
+                <button type="button" (click)="modal.close('')" class="btn btn-outline-dark" > < </button>
+            </div-->
+            <div class="div-two">
+                <div *ngFor="let tecnologiaFiltro of tecnologiasFiltro" class="div-one-item" (click)="removeOneItemTecnologias(tecnologiaFiltro)">{{tecnologiaFiltro}}</div>
+            </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('');">Filtrar</button>
+    </div>
+</ng-template>

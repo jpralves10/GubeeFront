@@ -1,0 +1,51 @@
+
+.comic-container{
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    display: table;
+    margin-bottom: 12px;
+    position: relative;
+    table-layout: fixed;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.16);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 12px;
+    position: relative;
+    background: #fff;
+}
+
+.comic-img{
+    display: table-cell;
+    padding: 12px;
+    vertical-align: middle;
+    width: 180px;
+}
+
+.comic-itens{
+    display: table-cell;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.comic-title{
+    font-size: 18px;
+    color: #5f6368;
+}
+
+.comic-price{
+    font-weight: bold;
+    color: #212121;
+    font-family: 'GoogleSans-Local-Bold','Roboto-Bold','HelveticaNeue-Bold',HelveticaNeue,Sans-Serif-Bold,Arial,Sans-Serif;
+    font-size: 18px;
+    margin-bottom: .5rem;
+}
+
+.comic-target{
+    margin-bottom: 20px;
+}
+
+.comic-alvo{
+    margin-left: 20px;
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    
+    <div *ngFor="let produto of listProdutos" class="comic-container">
+  
+      <div class="comic-itens">
+  
+        <div class="comic-title">
+          <h4>{{produto.productName}}</h4>
+          <p>{{produto.description}}</p>
+
+          <div class="comic-target">
+            <strong>Mercado Alvo:</strong>
+            <div *ngFor="let alvo of produto.targetMarket">
+              <div class="comic-alvo">{{alvo}}</div>
+            </div>
+          </div>
+
+          <div class="comic-target">
+            <strong>Tecnologias Utilizadas:</strong>
+            <div *ngFor="let stack of produto.stack">
+              <div class="comic-alvo">{{stack}}</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="comic-btn">
+          <button (click)="comprarComic()" class="btn btn-primary">
+              Comprar
+          </button>
+        </div>
+  
+      </div>
+    
+    </div>
+    
+</div>

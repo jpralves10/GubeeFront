@@ -1,0 +1,43 @@
+.navbar{
+    margin-bottom: 20px;
+    background-color: #202020;
+}
+
+.nav-link-a{
+    color: #fff;
+    padding: 10px;
+}
+
+.div-one{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    float: left;
+    overflow-y: auto;
+    margin-right: 15px;
+}
+
+.div-two{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    float: right;
+    overflow-y: auto;
+    /*margin-top: -80px;*/
+}
+
+.div-btn{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.div-one-item{
+    display: block;
+    cursor: pointer;
+}
+
+.div-one-item:hover{
+    background: #ffe6e6;
+}
